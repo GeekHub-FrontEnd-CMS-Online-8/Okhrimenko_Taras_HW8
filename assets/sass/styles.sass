@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,700')
+
+$main-color: #222222
+$lightGrey-color: #fafafa
+$ligttPurple: #7690c5
+
+$main-font: 'Poppins', sans-serif
+// ======== Site Menu ========
+
+
+
+// ===END===== Site Menu ========
+
+*
+	margin: 0
+	padding: 0
+
+// mixins for flex styles
+@mixin flex()
+	display: flex
+@mixin flex-column()
+	flex-direction: column
+@mixin flex-row()
+	flex-direction: row
+@mixin flex-justf-center()
+	justify-content: center
+@mixin flex-justf-around()
+	justify-content: space-around
+@mixin flex-justf-between()
+	justify-content: space-between
+@mixin flex-align-center()
+	align-items: center
+
+.filterColor
+	position: absolute
+	width: 100%
+	height: 100%
+	background-color: #000000
+	opacity: 0.35
+
+	z-index: 0
+
+.inner
+	margin-left: auto
+	margin-right: auto
+
+textarea
+	resize: none
+
+header
+	width: 100%
+	margin-left: auto
+	margin-right: auto
+	position: absolute
+
+	z-index: 10
+
+	.inner
+		@include flex()
+		@include flex-row()
+		@include flex-justf-between()
+		@include flex-align-center()
+		height: 100%
+
+	// menu
+	nav
+		
+		font-family: $main-font
+		font-size: 18px
+		font-weight: 500
+		line-height: 41px
+
+		ul
+			@include flex()
+			@include flex-row()
+			list-style: none
+			li a
+				color: #ffffff
+				text-decoration: none
+				transition: 0.3s
+			&.opening
+				@include flex()
+				@include flex-column()
+				@include flex-justf-between()
+				width: 44%
+				height: 40vh
+				margin-left: auto
+				margin-right: auto
+				margin-top: 1vh
+				margin-bottom: 1vh					
+
+				li
+					padding: 5px
+					border-radius: 5px
+					border: 2px solid #ffffff
+					background-color: #000000
+					opacity: 0.8
+
+					a
+						@include flex()
+						@include flex-justf-center()
+						width: 100%
+
+			display: none
+
+	.hamburger, .hamburger::before, .hamburger::after
+		content: ''
+		display: block
+		background: #ffffff
+		height: 3px
+		width: 2em
+		border-radius: 3px
+		-webkit-transition: all ease-in-out 350ms
+		transition: all ease-in-out 350ms
+
+	.open
+		.hamburger
+			-webkit-transform: rotate(45deg)
+			transform: rotate(45deg)
+			&::after
+				-webkit-transform: translateY(-1px) rotate(-90deg)
+				transform: translateY(-1px) rotate(-90deg)
+			&::before
+				display: none
+
+	.hamburger
+		&::after
+			-webkit-transform: translateY(4px)
+			transform: translateY(4px)
+		&::before
+			-webkit-transform: translateY(-7px)
+			transform: translateY(-7px)
+
+	.menu-toggle
+		position: absolute
+		padding: 0.8em
+		top: 1em
+		right: .5em
+		cursor: pointer
+
+#top_sect
+	@include flex()
+	@include flex-align-center()
+	background: url(../img/baner-bg.jpg)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center center
+
+	position: relative
+
+// ======== DESKTOP - @media(min-width: 1024px) ========
+@media(min-width: 1024px)
+	.inner
+		width: 942px
+
+	header	
+		height: 110px
+		nav ul
+			@include flex()
+			@include flex-row()
+			@include flex-justf-between()
+			width: 380px
+
+		nav a:hover,  nav a:focus
+			color: $ligttPurple
+
+		.menu-toggle
+			display: none
+
+
+	#top_sect
+		height: 620px
+// ===END===== DESKTOP - @media(min-width: 1024px) ========
+
+// ======== MOBILE - @media(max-width: 1024px) ========
+@media(max-width: 1024px)
+	.inner
+		width: 90%
+
+	header
+		height: 70px
+
+		// menu
+		.menu-pop
+			width: 100%
+			position: absolute
+			left: 0
+			top: 0px
+
+			background: url(../img/baner-bg.jpg)
+			background-repeat: no-repeat
+			background-size: cover
+			background-position: center center
+
+		.hamburger, .hamburger::before, .hamburger::after
+			display: block
+
+	#top_sect
+		height: 42vh
+// ===END===== MOBILE - @media(max-width: 1024px) ========
