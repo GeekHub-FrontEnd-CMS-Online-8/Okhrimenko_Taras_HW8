@@ -3,6 +3,7 @@
 $main-color: #222222
 $lightGrey-color: #fafafa
 $ligttPurple: #7690c5
+$text-color: #777777
 
 $main-font: 'Poppins', sans-serif
 // ======== Site Menu ========
@@ -14,6 +15,9 @@ $main-font: 'Poppins', sans-serif
 *
 	margin: 0
 	padding: 0
+
+h1, h2, h3, h4, h5, p, a, span
+	font-family: $main-font
 
 // mixins for flex styles
 @mixin flex()
@@ -37,12 +41,27 @@ $main-font: 'Poppins', sans-serif
 	height: 100%
 	background-color: #000000
 	opacity: 0.35
-
 	z-index: 0
 
 .inner
 	margin-left: auto
 	margin-right: auto
+
+.heading
+	text-align: center
+	h3
+		color: $main-color
+		font-weight: 300
+		letter-spacing: -1.5px
+		font-weight: 300
+		span
+			color: $main-color
+			font-weight: 700
+			letter-spacing: -1.5px
+	span
+		color: $text-color
+		font-weight: 400
+		letter-spacing: -0.55px
 
 textarea
 	resize: none
@@ -148,11 +167,261 @@ header
 
 	position: relative
 
+	.inner
+		@include flex()
+		@include flex-column()
+		@include flex-justf-between()
+		@include flex-align-center()
+
+		z-index: 1
+		text-align: center
+		color: #ffffff
+
+		#baner-text
+			@include flex()
+			@include flex-column()
+			@include flex-justf-between()
+
+			p
+				font-weight: 300
+				letter-spacing: -0.8px
+			h1
+				font-weight: 700
+				text-transform: uppercase
+				letter-spacing: -1.65px
+		a
+			@include flex()
+			@include flex-column()
+			@include flex-justf-center()
+			@include flex-align-center()
+			font-weight: 700
+			border: 2px solid #ffffff
+			border-radius: 5px
+			text-decoration: none
+			color: #ffffff
+			transition: 0.3s
+
+			&:hover
+				color: $ligttPurple
+				border: 2px solid $ligttPurple
+
+#webDev_sect, #identBrand_sect
+	@include flex()
+	@include flex-row()
+	@include flex-justf-center()
+	@include flex-align-center()	
+	.inner
+		@include flex()
+		@include flex-row()
+		@include flex-justf-between()
+		@include flex-align-center()
+		div
+			@include flex()
+			@include flex-column()
+			@include flex-justf-between()
+		h2
+			font-weight: 300
+			letter-spacing: -1.5px
+			& span
+				font-weight: 700
+		p
+			color: $text-color
+			font-weight: 400
+			letter-spacing: -0.45px
+
+#identBrand_sect
+	background: $lightGrey-color
+
+#options_sect
+	@include flex()
+	@include flex-row()
+	@include flex-justf-center()
+	@include flex-align-center()
+	.inner
+		@include flex()
+		@include flex-row()
+		@include flex-justf-between()
+		@include flex-align-center()
+		flex-wrap: wrap
+		.options-item
+			@include flex()
+			@include flex-row()
+			@include flex-justf-between()
+			h3
+				color: #222222
+				font-weight: 500
+				letter-spacing: -0.55px
+				margin-bottom: 4px
+			p
+				color: $text-color
+				font-weight: 400
+				line-height: 18px
+				letter-spacing: -0.45px
+
+#clients_sect
+	@include flex()
+	@include flex-row()
+	@include flex-justf-center()
+	@include flex-align-center()
+	background: $lightGrey-color
+	.inner
+		@include flex()
+		@include flex-column()
+		@include flex-justf-between()
+		@include flex-align-center()
+		.client-item
+			@include flex()
+			@include flex-row()
+			@include flex-justf-between()
+			@include flex-align-center()
+			width: 100%
+			div
+				@include flex()
+				@include flex-column()
+				@include flex-justf-around()
+				align-items: start
+				border: 2px solid #ffffff
+				background: #ffffff
+				p
+					color: $text-color
+					font-weight: 400
+					line-height: 28px
+					letter-spacing: -0.65px
+					padding-top: 30px
+					padding-left: 90px
+					padding-right: 80px
+				span
+					color: $ligttPurple
+					font-weight: 400
+					line-height: 36px
+					letter-spacing: -0.5px
+					padding-bottom: 30px
+					padding-left: 90px
+					padding-right: 80px
+
+#sponsorLogos_sect
+	@include flex()
+	@include flex-row()
+	@include flex-justf-center()
+	@include flex-align-center()
+	img
+		margin: 40px
+
+#team_sect
+	@include flex()
+	@include flex-row()
+	@include flex-justf-center()
+	@include flex-align-center()
+	background: #111111
+	.inner
+		@include flex()
+		@include flex-column()
+		@include flex-justf-between()
+		@include flex-align-center()
+		color: #ffffff
+		text-align: center
+		.heading h3, .heading span,
+			color: #ffffff
+		#teammates
+			@include flex()
+			@include flex-row()
+			@include flex-justf-between()
+			@include flex-align-center()
+			.team-item
+				@include flex()
+				@include flex-column()
+				@include flex-justf-between()
+				@include flex-align-center()
+				.team-social
+					@include flex()
+					@include flex-row()
+					a
+						@include flex()
+						@include flex-row()
+						@include flex-justf-center()
+						@include flex-align-center()
+						color: #ffffff
+						border: 3px solid #ffffff
+						border-radius: 25px
+				p					
+					font-weight: 700
+				span					
+					font-weight: 400
+					letter-spacing: -0.4px
+#contact_sect
+	@include flex()
+	@include flex-row()
+	@include flex-justf-center()
+	@include flex-align-center()
+	background: $ligttPurple
+	.inner
+		@include flex()
+		@include flex-row()
+		@include flex-justf-between()
+		.heading
+			text-align: left
+			h3
+				color: #ffffff
+				span
+					color: #ffffff
+			span
+				color: #ffffff
+		& div:nth-child(1), form
+			@include flex()
+			@include flex-column()
+			@include flex-justf-between()
+		& div:nth-child(1)
+			#contacts
+				@include flex()
+				@include flex-row()
+				@include flex-justf-between()
+				flex-wrap: wrap
+				div
+					color: #ffffff
+					p svg
+						padding-right: 13px
+		form
+			input, textarea
+				width: 100%
+				border: 1px solid #cccccc
+				border-radius: 5px
+				padding-left: 20px
+
+				color: #bbbbbb
+				font-family: $main-font
+				font-size: 14px
+				font-weight: 500
+				letter-spacing: -0.45px
+			input
+				height: 50px
+			textarea
+				height: 210px
+				padding-top: 20px
+			input::placeholder
+				padding-top: 20px
+footer	
+	
+	color: #ffffff
+	background: $ligttPurple
+	// text-align: center
+	.inner
+		height: 78px
+		@include flex()
+		@include flex-row()
+		@include flex-justf-center()
+		@include flex-align-center()
+		border-top: 1px solid #87a0d2
+
+
 // ======== DESKTOP - @media(min-width: 1024px) ========
 @media(min-width: 1024px)
 	.inner
 		width: 942px
-
+	.heading
+		h3, h3 span
+			font-size: 60px
+		span
+			font-size: 22px
 	header	
 		height: 110px
 		nav ul
@@ -160,41 +429,145 @@ header
 			@include flex-row()
 			@include flex-justf-between()
 			width: 380px
-
 		nav a:hover,  nav a:focus
 			color: $ligttPurple
-
 		.menu-toggle
 			display: none
-
-
 	#top_sect
 		height: 620px
+		.inner
+			width: 685px
+			height: 269px
+			#baner-text
+				width: 100%
+				height: 135px
+				p
+					font-size: 28px
+				h1
+					font-size: 62px
+			a
+				font-size: 22px
+				width: 240px
+				height: 65px
+	#webDev_sect
+		height: 440px
+		.inner
+			width: 850px
+			height: 244px
+			div
+				width: 555px
+			h2
+				font-size: 60px
+			p
+				font-size: 14px
+			img
+				width: auto
+				height: 222px
+	#identBrand_sect
+		height: 440px
+		.inner
+			width: 850px
+			height: 244px
+			div
+				width: 516px
+			h2
+				font-size: 60px
+			p
+				font-size: 14px
+			img
+				width: auto
+				height: 222px
+	#options_sect
+		height: 590px
+		.inner
+			height: 396px
+			.options-item
+				width: 388px
+				div
+					width: 284px
+					h3
+						font-size: 22px
+					p
+						font-size: 16px
+				img
+					width: 72px
+					height: 72px
+	#clients_sect
+		height: 810px
+		.inner
+			height: 650px
+			.client-item
+				div
+					width: 664px
+					height: 174px
+					p
+						font-size: 22px
+					span
+						font-size: 20px
+	#sponsorLogos_sect
+		height: 160px
+
+	#team_sect
+		height: 800px
+		.inner
+			width: 780px
+			height: 680px
+			#teammates
+				width: 780px
+				height: 370px
+				.team-item
+					width: 220px
+					height: 100%
+					.team-social
+						a
+							width: 40px
+							height: 40px
+							margin: 4px
+					p
+						font-size: 18px
+					span
+						font-size: 16px
+	#contact_sect
+		height: 560px
+		.inner
+			height: 360px
+			& div:nth-child(1)
+				width: 418px
+				.heading
+					h3 span
+						font-size: 60px
+					span
+						font-size: 18px
+				#contacts
+					height: 165px
+					div
+						width: 208px
+			form
+				width: 360px
+				height: 100%
+
+
+
 // ===END===== DESKTOP - @media(min-width: 1024px) ========
 
 // ======== MOBILE - @media(max-width: 1024px) ========
-@media(max-width: 1024px)
+@media(max-width: 1023px)
 	.inner
 		width: 90%
-
 	header
 		height: 70px
-
 		// menu
 		.menu-pop
 			width: 100%
 			position: absolute
 			left: 0
 			top: 0px
-
 			background: url(../img/baner-bg.jpg)
 			background-repeat: no-repeat
 			background-size: cover
 			background-position: center center
-
 		.hamburger, .hamburger::before, .hamburger::after
 			display: block
-
 	#top_sect
 		height: 42vh
 // ===END===== MOBILE - @media(max-width: 1024px) ========

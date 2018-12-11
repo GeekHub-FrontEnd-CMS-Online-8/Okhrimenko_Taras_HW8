@@ -3,6 +3,9 @@
   margin: 0;
   padding: 0; }
 
+h1, h2, h3, h4, h5, p, a, span {
+  font-family: "Poppins", sans-serif; }
+
 .filterColor {
   position: absolute;
   width: 100%;
@@ -14,6 +17,22 @@
 .inner {
   margin-left: auto;
   margin-right: auto; }
+
+.heading {
+  text-align: center; }
+  .heading h3 {
+    color: #222222;
+    font-weight: 300;
+    letter-spacing: -1.5px;
+    font-weight: 300; }
+    .heading h3 span {
+      color: #222222;
+      font-weight: 700;
+      letter-spacing: -1.5px; }
+  .heading span {
+    color: #777777;
+    font-weight: 400;
+    letter-spacing: -0.55px; }
 
 textarea {
   resize: none; }
@@ -102,10 +121,251 @@ header {
   background-size: cover;
   background-position: center center;
   position: relative; }
+  #top_sect .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    text-align: center;
+    color: #ffffff; }
+    #top_sect .inner #baner-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      #top_sect .inner #baner-text p {
+        font-weight: 300;
+        letter-spacing: -0.8px; }
+      #top_sect .inner #baner-text h1 {
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -1.65px; }
+    #top_sect .inner a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      border: 2px solid #ffffff;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #ffffff;
+      transition: 0.3s; }
+      #top_sect .inner a:hover {
+        color: #7690c5;
+        border: 2px solid #7690c5; }
+
+#webDev_sect, #identBrand_sect {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  #webDev_sect .inner, #identBrand_sect .inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+    #webDev_sect .inner div, #identBrand_sect .inner div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+    #webDev_sect .inner h2, #identBrand_sect .inner h2 {
+      font-weight: 300;
+      letter-spacing: -1.5px; }
+      #webDev_sect .inner h2 span, #identBrand_sect .inner h2 span {
+        font-weight: 700; }
+    #webDev_sect .inner p, #identBrand_sect .inner p {
+      color: #777777;
+      font-weight: 400;
+      letter-spacing: -0.45px; }
+
+#identBrand_sect {
+  background: #fafafa; }
+
+#options_sect {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  #options_sect .inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; }
+    #options_sect .inner .options-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      #options_sect .inner .options-item h3 {
+        color: #222222;
+        font-weight: 500;
+        letter-spacing: -0.55px;
+        margin-bottom: 4px; }
+      #options_sect .inner .options-item p {
+        color: #777777;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: -0.45px; }
+
+#clients_sect {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #fafafa; }
+  #clients_sect .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+    #clients_sect .inner .client-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%; }
+      #clients_sect .inner .client-item div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: start;
+        border: 2px solid #ffffff;
+        background: #ffffff; }
+        #clients_sect .inner .client-item div p {
+          color: #777777;
+          font-weight: 400;
+          line-height: 28px;
+          letter-spacing: -0.65px;
+          padding-top: 30px;
+          padding-left: 90px;
+          padding-right: 80px; }
+        #clients_sect .inner .client-item div span {
+          color: #7690c5;
+          font-weight: 400;
+          line-height: 36px;
+          letter-spacing: -0.5px;
+          padding-bottom: 30px;
+          padding-left: 90px;
+          padding-right: 80px; }
+
+#sponsorLogos_sect {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  #sponsorLogos_sect img {
+    margin: 40px; }
+
+#team_sect {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #111111; }
+  #team_sect .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    text-align: center; }
+    #team_sect .inner .heading h3, #team_sect .inner .heading span {
+      color: #ffffff; }
+    #team_sect .inner #teammates {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; }
+      #team_sect .inner #teammates .team-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center; }
+        #team_sect .inner #teammates .team-item .team-social {
+          display: flex;
+          flex-direction: row; }
+          #team_sect .inner #teammates .team-item .team-social a {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            border: 3px solid #ffffff;
+            border-radius: 25px; }
+        #team_sect .inner #teammates .team-item p {
+          font-weight: 700; }
+        #team_sect .inner #teammates .team-item span {
+          font-weight: 400;
+          letter-spacing: -0.4px; }
+
+#contact_sect {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #7690c5; }
+  #contact_sect .inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    #contact_sect .inner .heading {
+      text-align: left; }
+      #contact_sect .inner .heading h3 {
+        color: #ffffff; }
+        #contact_sect .inner .heading h3 span {
+          color: #ffffff; }
+      #contact_sect .inner .heading span {
+        color: #ffffff; }
+    #contact_sect .inner div:nth-child(1), #contact_sect .inner form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+    #contact_sect .inner div:nth-child(1) #contacts {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      #contact_sect .inner div:nth-child(1) #contacts div {
+        color: #ffffff; }
+        #contact_sect .inner div:nth-child(1) #contacts div p svg {
+          padding-right: 13px; }
+    #contact_sect .inner form input, #contact_sect .inner form textarea {
+      width: 100%;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      padding-left: 20px;
+      color: #bbbbbb;
+      font-family: "Poppins", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: -0.45px; }
+    #contact_sect .inner form input {
+      height: 50px; }
+    #contact_sect .inner form textarea {
+      height: 210px;
+      padding-top: 20px; }
+    #contact_sect .inner form input::placeholder {
+      padding-top: 20px; }
+
+footer {
+  color: #ffffff;
+  background: #7690c5; }
+  footer .inner {
+    height: 78px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #87a0d2; }
 
 @media (min-width: 1024px) {
   .inner {
     width: 942px; }
+  .heading h3, .heading h3 span {
+    font-size: 60px; }
+  .heading span {
+    font-size: 22px; }
   header {
     height: 110px; }
     header nav ul {
@@ -118,9 +378,115 @@ header {
     header .menu-toggle {
       display: none; }
   #top_sect {
-    height: 620px; } }
+    height: 620px; }
+    #top_sect .inner {
+      width: 685px;
+      height: 269px; }
+      #top_sect .inner #baner-text {
+        width: 100%;
+        height: 135px; }
+        #top_sect .inner #baner-text p {
+          font-size: 28px; }
+        #top_sect .inner #baner-text h1 {
+          font-size: 62px; }
+      #top_sect .inner a {
+        font-size: 22px;
+        width: 240px;
+        height: 65px; }
+  #webDev_sect {
+    height: 440px; }
+    #webDev_sect .inner {
+      width: 850px;
+      height: 244px; }
+      #webDev_sect .inner div {
+        width: 555px; }
+      #webDev_sect .inner h2 {
+        font-size: 60px; }
+      #webDev_sect .inner p {
+        font-size: 14px; }
+      #webDev_sect .inner img {
+        width: auto;
+        height: 222px; }
+  #identBrand_sect {
+    height: 440px; }
+    #identBrand_sect .inner {
+      width: 850px;
+      height: 244px; }
+      #identBrand_sect .inner div {
+        width: 516px; }
+      #identBrand_sect .inner h2 {
+        font-size: 60px; }
+      #identBrand_sect .inner p {
+        font-size: 14px; }
+      #identBrand_sect .inner img {
+        width: auto;
+        height: 222px; }
+  #options_sect {
+    height: 590px; }
+    #options_sect .inner {
+      height: 396px; }
+      #options_sect .inner .options-item {
+        width: 388px; }
+        #options_sect .inner .options-item div {
+          width: 284px; }
+          #options_sect .inner .options-item div h3 {
+            font-size: 22px; }
+          #options_sect .inner .options-item div p {
+            font-size: 16px; }
+        #options_sect .inner .options-item img {
+          width: 72px;
+          height: 72px; }
+  #clients_sect {
+    height: 810px; }
+    #clients_sect .inner {
+      height: 650px; }
+      #clients_sect .inner .client-item div {
+        width: 664px;
+        height: 174px; }
+        #clients_sect .inner .client-item div p {
+          font-size: 22px; }
+        #clients_sect .inner .client-item div span {
+          font-size: 20px; }
+  #sponsorLogos_sect {
+    height: 160px; }
+  #team_sect {
+    height: 800px; }
+    #team_sect .inner {
+      width: 780px;
+      height: 680px; }
+      #team_sect .inner #teammates {
+        width: 780px;
+        height: 370px; }
+        #team_sect .inner #teammates .team-item {
+          width: 220px;
+          height: 100%; }
+          #team_sect .inner #teammates .team-item .team-social a {
+            width: 40px;
+            height: 40px;
+            margin: 4px; }
+          #team_sect .inner #teammates .team-item p {
+            font-size: 18px; }
+          #team_sect .inner #teammates .team-item span {
+            font-size: 16px; }
+  #contact_sect {
+    height: 560px; }
+    #contact_sect .inner {
+      height: 360px; }
+      #contact_sect .inner div:nth-child(1) {
+        width: 418px; }
+        #contact_sect .inner div:nth-child(1) .heading h3 span {
+          font-size: 60px; }
+        #contact_sect .inner div:nth-child(1) .heading span {
+          font-size: 18px; }
+        #contact_sect .inner div:nth-child(1) #contacts {
+          height: 165px; }
+          #contact_sect .inner div:nth-child(1) #contacts div {
+            width: 208px; }
+      #contact_sect .inner form {
+        width: 360px;
+        height: 100%; } }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .inner {
     width: 90%; }
   header {
