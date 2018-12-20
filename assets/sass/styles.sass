@@ -574,4 +574,142 @@ footer
 			display: block
 	#top_sect
 		height: 42vh
+		.inner
+			width: 80vw
+			height: 60%
+			#baner-text
+				width: 100%
+				p
+					font-size: 18px
+				h1
+					font-size: 34px
+			a
+				font-size: 22px
+				width: 240px
+				height: 65px
+	#webDev_sect
+		padding-top: 30px
+		padding-bottom: 30px
+		.inner
+			@include flex-column()
+			@include flex-justf-around()
+			width: 90%
+			height: 90%
+			div
+				@include flex-column()
+				width: 100%
+			h2
+				font-size: 34px
+			p
+				font-size: 14px
+			img
+				width: auto
+				height: 222px
+	#identBrand_sect
+		padding-top: 30px
+		padding-bottom: 30px
+		.inner
+			@include flex-column()
+			@include flex-justf-around()
+			width: 90%
+			height: 90%
+			div
+				@include flex-column()
+				width: 100%
+				order: 1
+			h2
+				font-size: 34px
+			p
+				font-size: 14px
+			img
+				width: auto
+				height: 222px
+				order: 2
+	#options_sect
+		padding-top: 30px
+		padding-bottom: 30px
+		.inner
+			@include flex-column()
+			height: 1300px
+			.options-item
+				@include flex-column()
+				@include flex-align-center()
+				width: 300px
+				div
+					text-align: center
+					width: 284px
+					h3
+						font-size: 22px
+					p
+						font-size: 16px
+				img
+					width: 72px
+					height: 72px
+	#clients_sect
+		padding-top: 30px
+		padding-bottom: 30px
+		.inner
+			.heading
+				padding-bottom: 30px
+			.client-item
+				@include flex-column()
+				padding-bottom: 30px
+				img
+					order: 1
+				div
+					order: 2
+					p
+						padding: 10px
+					span
+						padding: 10px
+	#sponsorLogos_sect
+		@include flex-column()
+	#team_sect
+		padding-top: 30px
+		padding-bottom: 30px
+		.inner
+			.heading
+				padding-bottom: 30px
+			#teammates
+				@include flex-column()
+				width: 90%
+				.team-item
+					width: 220px
+					height: 100%
+					padding-bottom: 30px
+					.team-social
+						a
+							width: 40px
+							height: 40px
+							margin: 4px
+					p
+						font-size: 18px
+					span
+						font-size: 16px
+	#contact_sect
+		padding-top: 30px
+		padding-bottom: 30px
+		.inner
+			@include flex-column()
+			& div:nth-child(1)
+				order: 2
+				.heading
+					padding-bottom: 30px
+					order: 1
+					h3 span
+						font-size: 60px
+					span
+						font-size: 18px
+				#contacts
+					@include flex-column()
+					order: 2
+					height: 165px
+			form
+				order: 1
+				width: 90%
+				input
+					margin-bottom: 10px
+				padding-bottom: 30px
+	footer .inner
+		text-align: center
 // ===END===== MOBILE - @media(max-width: 1024px) ========

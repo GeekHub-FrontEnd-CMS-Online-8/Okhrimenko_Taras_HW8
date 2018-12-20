@@ -507,4 +507,139 @@ footer {
     header .hamburger, header .hamburger::before, header .hamburger::after {
       display: block; }
   #top_sect {
-    height: 42vh; } }
+    height: 42vh; }
+    #top_sect .inner {
+      width: 80vw;
+      height: 60%; }
+      #top_sect .inner #baner-text {
+        width: 100%; }
+        #top_sect .inner #baner-text p {
+          font-size: 18px; }
+        #top_sect .inner #baner-text h1 {
+          font-size: 34px; }
+      #top_sect .inner a {
+        font-size: 22px;
+        width: 240px;
+        height: 65px; }
+  #webDev_sect {
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    #webDev_sect .inner {
+      flex-direction: column;
+      justify-content: space-around;
+      width: 90%;
+      height: 90%; }
+      #webDev_sect .inner div {
+        flex-direction: column;
+        width: 100%; }
+      #webDev_sect .inner h2 {
+        font-size: 34px; }
+      #webDev_sect .inner p {
+        font-size: 14px; }
+      #webDev_sect .inner img {
+        width: auto;
+        height: 222px; }
+  #identBrand_sect {
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    #identBrand_sect .inner {
+      flex-direction: column;
+      justify-content: space-around;
+      width: 90%;
+      height: 90%; }
+      #identBrand_sect .inner div {
+        flex-direction: column;
+        width: 100%;
+        order: 1; }
+      #identBrand_sect .inner h2 {
+        font-size: 34px; }
+      #identBrand_sect .inner p {
+        font-size: 14px; }
+      #identBrand_sect .inner img {
+        width: auto;
+        height: 222px;
+        order: 2; }
+  #options_sect {
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    #options_sect .inner {
+      flex-direction: column;
+      height: 1300px; }
+      #options_sect .inner .options-item {
+        flex-direction: column;
+        align-items: center;
+        width: 300px; }
+        #options_sect .inner .options-item div {
+          text-align: center;
+          width: 284px; }
+          #options_sect .inner .options-item div h3 {
+            font-size: 22px; }
+          #options_sect .inner .options-item div p {
+            font-size: 16px; }
+        #options_sect .inner .options-item img {
+          width: 72px;
+          height: 72px; }
+  #clients_sect {
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    #clients_sect .inner .heading {
+      padding-bottom: 30px; }
+    #clients_sect .inner .client-item {
+      flex-direction: column;
+      padding-bottom: 30px; }
+      #clients_sect .inner .client-item img {
+        order: 1; }
+      #clients_sect .inner .client-item div {
+        order: 2; }
+        #clients_sect .inner .client-item div p {
+          padding: 10px; }
+        #clients_sect .inner .client-item div span {
+          padding: 10px; }
+  #sponsorLogos_sect {
+    flex-direction: column; }
+  #team_sect {
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    #team_sect .inner .heading {
+      padding-bottom: 30px; }
+    #team_sect .inner #teammates {
+      flex-direction: column;
+      width: 90%; }
+      #team_sect .inner #teammates .team-item {
+        width: 220px;
+        height: 100%;
+        padding-bottom: 30px; }
+        #team_sect .inner #teammates .team-item .team-social a {
+          width: 40px;
+          height: 40px;
+          margin: 4px; }
+        #team_sect .inner #teammates .team-item p {
+          font-size: 18px; }
+        #team_sect .inner #teammates .team-item span {
+          font-size: 16px; }
+  #contact_sect {
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    #contact_sect .inner {
+      flex-direction: column; }
+      #contact_sect .inner div:nth-child(1) {
+        order: 2; }
+        #contact_sect .inner div:nth-child(1) .heading {
+          padding-bottom: 30px;
+          order: 1; }
+          #contact_sect .inner div:nth-child(1) .heading h3 span {
+            font-size: 60px; }
+          #contact_sect .inner div:nth-child(1) .heading span {
+            font-size: 18px; }
+        #contact_sect .inner div:nth-child(1) #contacts {
+          flex-direction: column;
+          order: 2;
+          height: 165px; }
+      #contact_sect .inner form {
+        order: 1;
+        width: 90%;
+        padding-bottom: 30px; }
+        #contact_sect .inner form input {
+          margin-bottom: 10px; }
+  footer .inner {
+    text-align: center; } }
